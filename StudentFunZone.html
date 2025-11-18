@@ -1,32 +1,147 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Kursevi IPI</title>
-    </head>
-    <body>
-        <a href="index.html">
-            <img src="slike/logo-ipi.png" alt="Kursevi IPI">
+<html lang="bs">
+  <head>
+    <meta charset="utf-8" />
+    <title>IPI Akademija – Student Fun Zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/izgled.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- GORNJI HEADER -->
+      <header class="top-header">
+        <a href="index.html" class="brand">
+          <img src="slike/logo-ipi.png" alt="IPI Akademija logo" />
+          <div class="brand-text">
+            <span class="brand-kicker">IPI AKADEMIJA</span>
+            <span class="brand-title">Program kurseva iz ICT oblasti</span>
+          </div>
         </a>
-        
-        <ul>
+      </header>
+
+      <!-- DONJI HEADER -->
+      <header class="nav-header">
+        <nav class="main-nav">
+          <ul>
             <li><a href="index.html">O kursevima</a></li>
             <li><a href="popis.html">Popis kurseva</a></li>
             <li><a href="raspored.html">Raspored kurseva</a></li>
-	    <li><a href="studentfunzone.html">Student Fun Zone</a></li>
+
+            <li class="has-dropdown">
+              <a href="studentfunzone.html" class="sfz-link is-active"
+                >Student Fun Zone</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="bingo.html">Bingo</a></li>
+                <li><a href="kviz.html">Kviz</a></li>
+                <li><a href="whiteboard.html">Interaktivni Whiteboard</a></li>
+                <li><a href="visual-board.html">Visual Board</a></li>
+                <li><a href="kanban-board.html">Kanban Board</a></li>
+              </ul>
+            </li>
+
             <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-        
-		<h2>Student Fun Zone</h2>
-        <p>Odaberite jednu igru!</p>
-	
-<ul>
-            <li><a href="bingo.html">Bingo</a></li>
-            <li><a href="kviz.html">Kviz</a></li>
-            
-        </ul>
-        
-        <hr>
-        &copy; Internacionalna poslovno-informaciona akademija Tuzla
-    </body>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Hero -->
+        <article class="intro-article">
+          <div class="intro-text">
+            <h1>Student Fun Zone</h1>
+            <p>
+              Student Fun Zone je dio IPI Akademija web stranice namijenjen
+              opuštanju, vježbanju logike i kreativnosti kroz jednostavne
+              interaktivne igre i alate.
+            </p>
+            <p>
+              U nastavi se često koriste bingo, kvizovi, vizualne ploče i kanban
+              boardovi, a ovdje su prilagođeni za online verziju koju polaznici
+              mogu koristiti i od kuće.
+            </p>
+          </div>
+          <div class="intro-media">
+            <img src="slike/funzone.jpg" alt="Studenti u zabavnoj zoni" />
+          </div>
+        </article>
+
+        <!-- Grid  -->
+        <section class="course-groups">
+          <h2>Odaberi aktivnost</h2>
+
+          <div class="course-grid">
+            <article class="course-card">
+              <img src="slike/bingo.jpg" class="card-img" alt="Bingo" />
+              <h3>Bingo</h3>
+              <p>
+                Klasični bingo prilagođen za učionicu ili online nastavu.
+                Idealan za ponavljanje gradiva na zanimljiv način.
+              </p>
+              <p>
+                <a href="bingo.html">Otvori Bingo stranicu</a>
+              </p>
+            </article>
+
+            <article class="course-card">
+              <img src="slike/quiz.jpg" class="card-img" alt="Kviz" />
+              <h3>Kviz</h3>
+              <p>
+                Brzi kvizovi za provjeru znanja iz oblasti računara, interneta i
+                web tehnologija. Može se koristiti individualno ili u grupi.
+              </p>
+              <p>
+                <a href="kviz.html">Otvori Kviz stranicu</a>
+              </p>
+            </article>
+
+            <article class="course-card">
+              <img
+                src="slike/whiteboard.jpg"
+                class="card-img"
+                alt="Whiteboard"
+              />
+              <h3>Interaktivni Whiteboard</h3>
+              <p>
+                Digitalna tabla za crtanje, pisanje i objašnjavanje gradiva.
+                Korisna u nastavi, konsultacijama ili grupnom radu.
+              </p>
+              <p>
+                <a href="whiteboard.html">Otvori Whiteboard stranicu</a>
+              </p>
+            </article>
+
+            <article class="course-card">
+              <img src="slike/visual.jpg" class="card-img" alt="Visual Board" />
+              <h3>Visual Board</h3>
+              <p>
+                Vizualna ploča za organizaciju ideja, zadataka i materijala.
+                Pomaže u učenju kroz kartice, boje i vizuelne grupe.
+              </p>
+              <p>
+                <a href="visual-board.html">Otvori Visual Board stranicu</a>
+              </p>
+            </article>
+
+            <article class="course-card">
+              <img src="slike/kanban.jpg" class="card-img" alt="Kanban Board" />
+              <h3>Kanban Board</h3>
+              <p>
+                Kanban ploča za praćenje zadataka po fazama (To Do, In Progress,
+                Done). Odlična za timske projekte i ličnu organizaciju.
+              </p>
+              <p>
+                <a href="kanban-board.html">Otvori Kanban Board stranicu</a>
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; Internacionalna poslovno-informaciona akademija Tuzla</p>
+      </footer>
+    </div>
+  </body>
 </html>

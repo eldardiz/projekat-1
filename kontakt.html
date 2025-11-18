@@ -1,31 +1,118 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Kursevi IPI</title>
-    </head>
-    <body>
-        <a href="index.html">
-            <img src="slike/logo-ipi.png" alt="Kursevi IPI">
+<html lang="bs">
+  <head>
+    <meta charset="utf-8" />
+    <title>IPI Akademija – Kontakt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/izgled.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- GORNJI HEADER -->
+      <header class="top-header">
+        <a href="index.html" class="brand">
+          <img src="slike/logo-ipi.png" alt="IPI Akademija logo" />
+          <div class="brand-text">
+            <span class="brand-kicker">IPI AKADEMIJA</span>
+            <span class="brand-title">Program kurseva iz ICT oblasti</span>
+          </div>
         </a>
-        <ul>
+      </header>
+
+      <!-- DONJI HEADER -->
+      <header class="nav-header">
+        <nav class="main-nav">
+          <ul>
             <li><a href="index.html">O kursevima</a></li>
             <li><a href="popis.html">Popis kurseva</a></li>
             <li><a href="raspored.html">Raspored kurseva</a></li>
-	    <li><a href="studentfunzone.html">Student Fun Zone</a></li>
+
+            <li class="has-dropdown">
+              <a href="studentfunzone.html" class="sfz-link is-active"
+                >Student Fun Zone</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="bingo.html">Bingo</a></li>
+                <li><a href="kviz.html">Kviz</a></li>
+                <li><a href="whiteboard.html">Interaktivni Whiteboard</a></li>
+                <li><a href="visual-board.html">Visual Board</a></li>
+                <li><a href="kanban-board.html">Kanban Board</a></li>
+              </ul>
+            </li>
+
             <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-        <h2>Kontakt</h2>      
-        <img src="slike/srce.jpg" alt="Srce">
-        <p>Do IPI-ja se može doći javnim gradskim prevozom ili taksijem.</p>
-        <p>Naša adresa je:</p>
-        <p>Sveučilišni računski centar<br>
-            Kulina bana br. 2 (Skver)<br>
-            Tuzla<br>
-            75000<br>
-            Bosna i Hercegovina<br>
-            <a href="mailto:info@ipi-akademija.ba">info@ipi-akademija.ba</a></p>
-        <hr>
-        &copy; Internacionalna poslovno-informaciona akademija Tuzla
-    </body>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <article class="intro-article">
+          <div class="intro-text">
+            <h1>Kontakt informacije</h1>
+            <p>
+              Do IPI Akademije možete doći javnim prevozom, taksijem ili pješke,
+              zavisno od vaše lokacije. U nastavku su navedene sve relevantne
+              informacije, uključujući adresu i kontakt e-mail.
+            </p>
+          </div>
+          <div class="intro-media">
+            <img src="slike/srce.jpg" alt="Lokacija IPI Akademije" />
+          </div>
+        </article>
+
+        <!-- Kontakt -->
+        <section class="info-section">
+          <div class="info-block">
+            <h2>Adresa</h2>
+            <p>
+              Sveučilišni računski centar<br />
+              Kulina bana br. 2 (Skver)<br />
+              Tuzla, 75000<br />
+              Bosna i Hercegovina
+            </p>
+
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:info@ipi-akademija.ba">info@ipi-akademija.ba</a>
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h2>Kako doći?</h2>
+            <p>
+              Lokacija se nalazi u centralnom dijelu Tuzle, lako dostupna pješke
+              ili gradskim prevozom. U blizini se nalaze taxi stanice, parking
+              prostori i više autobusnih linija koje povezuju sve dijelove
+              grada.
+            </p>
+          </div>
+        </section>
+
+        <!-- Mapa lokacije -->
+        <section style="margin-top: 20px">
+          <h2>Mapa lokacije</h2>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.015908873613!2d18.675431315454144!3d44.53812317899812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758bb3a940af0ab%3A0x150f0e3d7c6310da!2sIPI%20Akademija!5e0!3m2!1sen!2sba!4v1672441337084!5m2!1sen!2sba"
+            width="100%"
+            height="300"
+            style="
+              border: 0;
+              border-radius: 12px;
+              box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+            "
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>&copy; Internacionalna poslovno-informaciona akademija Tuzla</p>
+      </footer>
+    </div>
+  </body>
 </html>

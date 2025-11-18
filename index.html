@@ -1,40 +1,166 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Kursevi IPI</title>
-    </head>
-    <body>
-        <a href="index.html">
-            <img src="slike/logo-ipi.png" alt="Kursevi IPI">
+<html lang="bs">
+  <head>
+    <meta charset="utf-8" />
+    <title>IPI Akademija – Kursevi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/izgled.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="top-header">
+        <a href="index.html" class="brand">
+          <img src="slike/logo-ipi.png" alt="IPI Akademija logo" />
+          <div class="brand-text">
+            <span class="brand-kicker">IPI AKADEMIJA</span>
+            <span class="brand-title">Program kurseva iz ICT oblasti</span>
+          </div>
         </a>
-        <ul>
+      </header>
+
+      <header class="nav-header">
+        <nav class="main-nav">
+          <ul>
             <li><a href="index.html">O kursevima</a></li>
             <li><a href="popis.html">Popis kurseva</a></li>
             <li><a href="raspored.html">Raspored kurseva</a></li>
-            <li><a href="studentfunzone.html">Student Fun Zone</a></li>
+
+            <li class="has-dropdown">
+              <a href="studentfunzone.html" class="sfz-link is-active"
+                >Student Fun Zone</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="bingo.html">Bingo</a></li>
+                <li><a href="kviz.html">Kviz</a></li>
+                <li><a href="whiteboard.html">Interaktivni Whiteboard</a></li>
+                <li><a href="visual-board.html">Visual Board</a></li>
+                <li><a href="kanban-board.html">Kanban Board</a></li>
+              </ul>
+            </li>
+
             <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-        <h2>O kursevima</h2>
-        <img src="slike/tecajevi1.png" alt="Kursevi IPI">
-        <p><a href="http://ipi-akademija.ba/" target="_blank">IPI akademija</a> više od pet godina održava stručne kurseve iz područja ICT-a.</p>
-        <p><strong>Kursevi IPI</strong> namijenjeni su svima zainteresiranima za stjecanje osnovnih znanja o upotrebi informacijsko-komunikacijskih tehnologija.</p>
-        <p>
-            Kursevi su podijeljeni u nekoliko skupina:
-            <ul>
-                <li>kursevi iz osnova upotrebe računara i <a href="http://hr.wikipedia.org/wiki/Internet" target="_blank">Interneta</a></li>
-                <li>kursevi o <em>web</em>-tehnologijama, izradi <em>web</em>-stranica i <em>web</em>-sjedišta</li>
-                <li>kursevi o informatičkoj sigurnosti</li>
-                <li>uvodni kursevi o <a href="http://www.linux.com" target="_blank">Linuxu</a> i drugi.</li>
-            </ul>
-        </p>
-        <p>Kursevi se održavaju u moderno opremljenim, klimatiziranim učionicama veličine 50m<sup>2</sup>.</p>
-        <p>Na osnovne kurseve mogu se prijaviti svi zainteresirani polaznici. Za polaznike koji su članovi akademske zajednice (studenti, nastavnici te uposlenici visokih učilišta i javnih znanstvenih instituta) osigurane su posebne pogodnosti (znatno niže cijene ili <strong>besplatni kursevi</strong>), a neke od pogodnosti primjenjuju se i na polaznike koji nisu članovi akademske zajednice. I za nezaposlene su osigurani popusti za pohađanje kurseva.</p>
-        <p>Objavljen je <a href="raspored.html">raspored kurseva</a> za tekući mjesec.</p>
-        <p>Za sva pitanja vezano za kurseve obratite se na <em>e-mail</em> adresu <a href="mailto:info@ ipi-akademija.ba ">info@ipi-akademija.ba </a>.</p>
-		
-		
-        <hr>
-        <footer>&copy; Internacionalna poslovno-informaciona akademija Tuzla</footer>
-    </body>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <article class="intro-article">
+          <div class="intro-text">
+            <h1>Dobrodošli na kurseve IPI Akademije</h1>
+            <p>
+              IPI akademija već nekoliko godina organizuje programske i stručne
+              kurseve iz oblasti informaciono–komunikacijskih tehnologija.
+              <a href="http://ipi-akademija.ba/" target="_blank"
+                >Saznaj više na zvaničnoj stranici.</a
+              >
+            </p>
+            <p>
+              Kursevi su namijenjeni svim polaznicima koji žele steći čvrste
+              osnove u korištenju računara, interneta i savremenih digitalnih
+              alata, bez obzira na prethodno iskustvo.
+            </p>
+          </div>
+          <div class="intro-media">
+            <img
+              src="slike/tecajevi1.png"
+              alt="Polaznici IPI kurseva u učionici"
+            />
+          </div>
+        </article>
+
+        <section class="course-groups">
+          <h2>Tematske cjeline kurseva</h2>
+          <div class="course-grid">
+            <article class="course-card">
+              <h3>Osnove rada na računaru</h3>
+              <p>
+                Uvodni kursevi za polaznike koji žele savladati osnovne alate,
+                rad u operativnom sistemu i sigurno korištenje interneta.
+              </p>
+              <ul>
+                <li>osnove rada na računaru</li>
+                <li>rad sa dokumentima i tabelama</li>
+                <li>sigurnost na internetu</li>
+              </ul>
+            </article>
+
+            <article class="course-card">
+              <h3>Web tehnologije i razvoj</h3>
+              <p>
+                Kursevi fokusirani na izradu web stranica i web sjedišta,
+                korištenje HTML-a, CSS-a i pratećih tehnologija.
+              </p>
+              <ul>
+                <li>uvod u HTML i CSS</li>
+                <li>izrada responzivnih web stranica</li>
+                <li>upotreba modernih web alata</li>
+              </ul>
+            </article>
+
+            <article class="course-card">
+              <h3>Informacijska sigurnost</h3>
+              <p>
+                Programi koji pokrivaju osnove zaštite podataka, siguran rad na
+                mreži i prepoznavanje najčešćih prijetnji.
+              </p>
+              <ul>
+                <li>osnove informacijske sigurnosti</li>
+                <li>zaštita korisničkih računa</li>
+                <li>prepoznavanje phishing napada</li>
+              </ul>
+            </article>
+
+            <article class="course-card">
+              <h3>Linux i napredne teme</h3>
+              <p>
+                Uvod u Linux operativni sistem i druge specijalizovane teme za
+                polaznike koji žele proširiti postojeća znanja.
+              </p>
+              <ul>
+                <li>uvod u Linux okruženje</li>
+                <li>osnovne komande i administracija</li>
+                <li>dodatni specijalizirani kursevi</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="info-section">
+          <div class="info-block">
+            <h2>Uslovi pohađanja i pogodnosti</h2>
+            <p>
+              Kursevi se održavaju u savremeno opremljenim, klimatiziranim
+              učionicama površine oko 50 m<sup>2</sup>. Na osnovne kurseve mogu
+              se prijaviti svi zainteresovani polaznici.
+            </p>
+            <p>
+              Članovima akademske zajednice (studenti, nastavnici i uposlenici
+              visokoškolskih ustanova i naučnih instituta) odobrene su posebne
+              pogodnosti, uključujući znatno niže cijene ili povremeno potpuno
+              besplatne kurseve. Popusti su obezbijeđeni i za nezaposlene
+              polaznike.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h2>Aktuelni raspored i kontakt</h2>
+            <p>
+              Objavljen je <a href="raspored.html">raspored kurseva</a> za
+              tekući mjesec. Preporučujemo da ga redovno provjeravate zbog novih
+              termina i grupa.
+            </p>
+            <p>
+              Za sva dodatna pitanja u vezi sa prijavama i programom kurseva
+              možete se obratiti na e-mail adresu:
+              <a href="mailto:info@ipi-akademija.ba">info@ipi-akademija.ba</a>.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; Internacionalna poslovno-informaciona akademija Tuzla</p>
+      </footer>
+    </div>
+  </body>
 </html>

@@ -1,41 +1,109 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Kursevi IPI</title>
-    </head>
-    <body>
-        <a href="index.html">
-            <img src="slike/logo.png" alt="Kursevi IPI">
+<html lang="bs">
+  <head>
+    <meta charset="utf-8" />
+    <title>IPI Akademija – Popis kurseva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/izgled.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- GORNJI HEADER -->
+      <header class="top-header">
+        <a href="index.html" class="brand">
+          <img src="slike/logo-ipi.png" alt="IPI Akademija logo" />
+          <div class="brand-text">
+            <span class="brand-kicker">IPI AKADEMIJA</span>
+            <span class="brand-title">Program kurseva iz ICT oblasti</span>
+          </div>
         </a>
-        <ul>
+      </header>
+
+      <!-- DONJI HEADER -->
+      <header class="nav-header">
+        <nav class="main-nav">
+          <ul>
             <li><a href="index.html">O kursevima</a></li>
             <li><a href="popis.html">Popis kurseva</a></li>
             <li><a href="raspored.html">Raspored kurseva</a></li>
-	    <li><a href="studentfunzone.html">Student Fun Zone</a></li>
+
+            <li class="has-dropdown">
+              <a href="studentfunzone.html" class="sfz-link is-active"
+                >Student Fun Zone</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="bingo.html">Bingo</a></li>
+                <li><a href="kviz.html">Kviz</a></li>
+                <li><a href="whiteboard.html">Interaktivni Whiteboard</a></li>
+                <li><a href="visual-board.html">Visual Board</a></li>
+                <li><a href="kanban-board.html">Kanban Board</a></li>
+              </ul>
+            </li>
+
             <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-        <h2>Popis kurseva</h2>
-        <img src="slike/tecajevi3.jpg" alt="Kursevi IPI">
-        <h3>Kursevi o osnovama upotrebe računara i Interneta</h3>       
-        <ol>
-            <li>Osnove računala (Windows)</li>
-            <li>Osnove komunikacija (Internet Explorer, Microsoft Outlook) </li>
-            <li>Obrada teksta (Word) </li>
-            <li>Proračunske tablice (Excel) </li>
-            <li>Uporaba baza podataka (Access)</li>
-            <li>Prezentacije (PowerPoint)</li>
-            <li>IT sigurnost</li>
-            <li>Online suradnja</li>
-        </ol>
-        <h3>Tečajevi o <em>web</em>-tehnologijama, izradi <em>web</em>-stranica i <em>web</em>-sjedišta</h3>
-        <ol start="9">
-            <li>Uvod u HTML</li>
-            <li>Uvod u CSS</li>
-            <li>Osnove JavaScripta</li>
-            <li>Uvod u XML</li>
-        </ol>	
-        <hr>
-        &copy; Internacionalna poslovno-informaciona akademija Tuzla
-    </body>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Hero -->
+        <article class="intro-article">
+          <div class="intro-text">
+            <h1>Popis kurseva</h1>
+            <p>
+              IPI Akademija nudi strukturisan program kurseva koji pokriva
+              osnove rada na računaru, web tehnologije, informacionu sigurnost i
+              napredne teme. U nastavku možeš pronaći pregled svih aktuelnih
+              kurseva po tematskim cjelinama.
+            </p>
+          </div>
+          <div class="intro-media">
+            <img
+              src="slike/tecajevi3.jpg"
+              alt="Polaznici na različitim kursevima IPI Akademije"
+            />
+          </div>
+        </article>
+
+        <!-- Kartice -->
+        <section class="course-groups">
+          <h2>Tematske cjeline i kursevi</h2>
+
+          <div class="course-grid">
+            <!-- Osnove računaraa -->
+            <article class="course-card">
+              <h3>Kursevi o osnovama upotrebe računara i Interneta</h3>
+              <ol>
+                <li>Osnove računala (Windows)</li>
+                <li>
+                  Osnove komunikacija (Internet Explorer, Microsoft Outlook)
+                </li>
+                <li>Obrada teksta (Word)</li>
+                <li>Proračunske tablice (Excel)</li>
+                <li>Uporaba baza podataka (Access)</li>
+                <li>Prezentacije (PowerPoint)</li>
+                <li>IT sigurnost</li>
+                <li>Online suradnja</li>
+              </ol>
+            </article>
+
+            <!-- Web tehnologije -->
+            <article class="course-card">
+              <h3>Kursevi o web-tehnologijama i izradi web-stranica</h3>
+              <ol start="9">
+                <li>Uvod u HTML</li>
+                <li>Uvod u CSS</li>
+                <li>Osnove JavaScripta</li>
+                <li>Uvod u XML</li>
+              </ol>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; Internacionalna poslovno-informaciona akademija Tuzla</p>
+      </footer>
+    </div>
+  </body>
 </html>
