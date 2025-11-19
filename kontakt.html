@@ -90,9 +90,129 @@
           </div>
         </section>
 
+        <section class="contact-section">
+          <h2>Kontakt forma</h2>
+
+          <div class="contact-form-card">
+            <div class="form-group">
+              <label for="ime">Ime i prezime</label>
+              <input
+                type="text"
+                id="ime"
+                name="Ime i prezime"
+                placeholder="Unesite vaše ime i prezime"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email adresa</label>
+              <input
+                type="email"
+                id="email"
+                name="Email"
+                placeholder="primjer@email.com"
+                required
+              />
+              <p id="email-error" class="error-message" style="display: none">
+                Unesite ispravnu email adresu.
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="telefon">Broj telefona</label>
+              <input
+                type="text"
+                id="telefon"
+                name="Telefon"
+                placeholder="Unesite vaš broj telefona"
+                required
+              />
+              <p id="telefon-error" class="error-message" style="display: none">
+                Unesite ispravan broj telefona (samo cifre, min. 6).
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="poruka">Poruka</label>
+              <textarea
+                id="poruka"
+                name="Poruka"
+                placeholder="Napišite vašu poruku..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button id="sendBtn">Pošalji poruku</button>
+            </div>
+          </div>
+        </section>
+
+        <script>
+          document
+            .getElementById("sendBtn")
+            .addEventListener("click", function (e) {
+              const ime = document.getElementById("ime").value.trim();
+              const email = document.getElementById("email").value.trim();
+              const telefon = document.getElementById("telefon").value.trim();
+              const poruka = document.getElementById("poruka").value.trim();
+
+              const emailError = document.getElementById("email-error");
+              const telefonError = document.getElementById("telefon-error");
+
+              // Email regex
+              const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+              if (!emailValid) {
+                emailError.style.display = "block";
+                document.getElementById("email").style.borderColor = "#dc2626";
+                return;
+              } else {
+                emailError.style.display = "none";
+                document.getElementById("email").style.borderColor = "#d1d5db";
+              }
+
+              // Validacija telefona – samo cifre, min 6
+              const phoneValid = /^[0-9]{6,}$/.test(telefon);
+
+              if (!phoneValid) {
+                telefonError.style.display = "block";
+                document.getElementById("telefon").style.borderColor =
+                  "#dc2626";
+                return;
+              } else {
+                telefonError.style.display = "none";
+                document.getElementById("telefon").style.borderColor =
+                  "#d1d5db";
+              }
+
+              // mailto link
+              const mailtoLink =
+                "mailto:info@ipi-akademija.ba" +
+                "?subject=Kontakt poruka" +
+                "&body=" +
+                encodeURIComponent(
+                  "Ime i prezime: " +
+                    ime +
+                    "\n" +
+                    "Email: " +
+                    email +
+                    "\n" +
+                    "Telefon: " +
+                    telefon +
+                    "\n" +
+                    "Poruka: " +
+                    poruka
+                );
+
+              window.location.href = mailtoLink;
+            });
+        </script>
+
         <!-- Mapa lokacije -->
         <section style="margin-top: 20px">
-          <h2>Mapa lokacije</h2>
+          <h2 style="color: white">Mapa lokacije</h2>
 
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.015908873613!2d18.675431315454144!3d44.53812317899812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758bb3a940af0ab%3A0x150f0e3d7c6310da!2sIPI%20Akademija!5e0!3m2!1sen!2sba!4v1672441337084!5m2!1sen!2sba"

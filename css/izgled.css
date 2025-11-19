@@ -485,3 +485,81 @@ input[type="submit"]:hover {
   background: #e5e7eb !important;
   color: #0f172a !important;
 }
+
+/* forma */
+/* Kontakt forma – full width card */
+
+/* Kontakt forma – full width modern design */
+
+.contact-form-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.17);
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: #f9fafb;
+}
+
+.form-group textarea {
+  min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1d4ed8;
+  background-color: #ffffff;
+}
+
+.form-actions {
+  margin-top: 10px;
+}
+
+.form-actions button {
+  background-color: #1d4ed8;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.form-actions button:hover {
+  background-color: #1e40af;
+  transform: translateY(-1px);
+}
+
+.error-message {
+  color: #dc2626; /* crvena */
+  font-size: 13px;
+  margin-top: 4px;
+}
