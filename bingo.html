@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IPI Akademija – Bingo | Student Fun Zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/izgled.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- GORNJI HEADER -->
+      <header class="top-header">
+        <a href="index.html" class="brand">
+          <img src="slike/logo-ipi.png" alt="IPI Akademija logo" />
+          <div class="brand-text">
+            <span class="brand-kicker">IPI AKADEMIJA</span>
+            <span class="brand-title">Program kurseva iz ICT oblasti</span>
+          </div>
+        </a>
+      </header>
+
+      <!-- DONJI HEADER SA DROPDOWNOM -->
+      <header class="nav-header">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">O kursevima</a></li>
+            <li><a href="popis.html">Popis kurseva</a></li>
+            <li><a href="raspored.html">Raspored kurseva</a></li>
+
+            <li class="has-dropdown">
+              <a href="studentfunzone.html" class="sfz-link"
+                >Student Fun Zone</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="bingo.html" class="is-active">Bingo</a></li>
+                <li><a href="kviz.html">Kviz</a></li>
+                <li><a href="whiteboard.html">Interaktivni Whiteboard</a></li>
+                <li><a href="visual-board.html">Visual Board</a></li>
+                <li><a href="kanban-board.html">Kanban Board</a></li>
+              </ul>
+            </li>
+
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <article class="intro-article">
+          <div class="intro-text">
+            <h1>Student Fun Zone – Bingo</h1>
+            <p>
+              Bingo je jednostavna, ali zabavna aktivnost za upoznavanje kolega
+              i razbijanje treme na času. Klikni na polje da ga označiš, popuni
+              red, kolonu ili dijagonalu i osvojiš bingo.
+            </p>
+            <p>
+              Svaka nova kartica nasumično generiše izjave, a središnje polje je
+              uvijek besplatno.
+            </p>
+          </div>
+          <div class="intro-media">
+            <img src="slike/bingo.jpg" alt="Bingo kartica za studente" />
+          </div>
+        </article>
+
+        <!-- BINGo -->
+        <section class="bingo-section">
+          <div class="bingo-card">
+            <div class="bingo-header-row">
+              <h2>Bingo kartica</h2>
+              <div class="bingo-controls">
+                <button id="generateCardBtn">Nova kartica</button>
+                <button id="resetMarksBtn">Reset oznaka</button>
+                <button id="exportPdfBtn">Snimi kao PDF</button>
+              </div>
+            </div>
+
+            <p class="bingo-intro">
+              Klikni na polja koja se odnose na tebe ili kolege. Kada
+              kompletiraš red, kolonu ili dijagonalu, dobićeš obavijest da si
+              ostvario bingo.
+            </p>
+
+            <div id="bingoStatus" class="bingo-status"></div>
+
+            <div class="bingo-table-wrapper">
+              <table
+                id="bingoTable"
+                class="bingo-table"
+                aria-label="Bingo tabla"
+              >
+                <tbody id="bingoBoard"></tbody>
+              </table>
+            </div>
+
+            <p class="bingo-back-link">
+              <a href="studentfunzone.html">← Povratak na Student Fun Zone</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- OVERLAy -->
+        <div
+          id="bingoOverlay"
+          class="modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="bingoWinTitle"
+        >
+          <div class="modal-card">
+            <button
+              class="modal-close-btn"
+              type="button"
+              aria-label="Zatvori"
+              id="bingoCloseBtn"
+            >
+              ×
+            </button>
+            <h2 id="bingoWinTitle">Bingo!</h2>
+            <p id="bingoWinMsg">
+              Čestitamo, kompletirao si liniju! Možeš generisati novu karticu
+              ili nastaviti igru.
+            </p>
+            <div class="modal-actions">
+              <button type="button" id="bingoNewGameBtn">Nova kartica</button>
+              <button type="button" id="bingoResetBtn">Reset oznaka</button>
+              <button type="button" id="bingoPrintBtn">Snimi u PDF</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; Internacionalna poslovno-informaciona akademija Tuzla</p>
+      </footer>
+    </div>
+
+    <script src="bingo.js"></script>
+  </body>
+</html>
