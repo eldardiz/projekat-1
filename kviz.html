@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IPI Akademija – Kviz | Student Fun Zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/izgled.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- GORNJI HEADER -->
+      <header class="top-header">
+        <a href="index.html" class="brand">
+          <img src="slike/logo-ipi.png" alt="IPI Akademija logo" />
+          <div class="brand-text">
+            <span class="brand-kicker">IPI AKADEMIJA</span>
+            <span class="brand-title">Program kurseva iz ICT oblasti</span>
+          </div>
+        </a>
+      </header>
+
+      <!-- DONJI HEADER -->
+      <header class="nav-header">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">O kursevima</a></li>
+            <li><a href="popis.html">Popis kurseva</a></li>
+            <li><a href="raspored.html">Raspored kurseva</a></li>
+
+            <li class="has-dropdown">
+              <a href="studentfunzone.html" class="sfz-link"
+                >Student Fun Zone</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="bingo.html">Bingo</a></li>
+                <li><a href="kviz.html" class="is-active">Kviz</a></li>
+                <li><a href="whiteboard.html">Interaktivni Whiteboard</a></li>
+                <li><a href="visual-board.html">Visual Board</a></li>
+                <li><a href="kanban-board.html">Kanban Board</a></li>
+              </ul>
+            </li>
+
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- HERO ZA KVIZ -->
+        <article class="intro-article">
+          <div class="intro-text">
+            <h1>Student Fun Zone – Kviz</h1>
+            <p>
+              Kratki kviz za provjeru znanja iz osnova web razvoja i rada na
+              projektima. Neka pitanja imaju jedan tačan odgovor, a neka više
+              tačnih odgovora.
+            </p>
+            <p>
+              Odvojite par minuta, odgovorite iskreno i pogledajte koliko toga
+              već znate.
+            </p>
+          </div>
+          <div class="intro-media">
+            <img src="slike/quiz.jpg" alt="Studenti rješavaju kviz" />
+          </div>
+        </article>
+
+        <!-- KVIZ SEKCIJA -->
+        <section class="quiz-section">
+          <div class="quiz-card" id="quizRoot">
+            <h2>Mini kviz o web razvoju</h2>
+            <p class="quiz-intro">
+              Označite odgovore, zatim kliknite na "Provjerite odgovore" da
+              vidite rezultat.
+            </p>
+
+            <form class="quiz-form" onsubmit="return false;">
+              <!-- Pitanje 1 -->
+              <div id="q1_block" class="quiz-question">
+                <h3>1. Šta radi CSS u web razvoju?</h3>
+                <label>
+                  <input
+                    type="radio"
+                    id="q1a1"
+                    name="q1"
+                    value="Stilizuje izgled stranice"
+                  />
+                  Stilizuje izgled stranice </label
+                ><br />
+                <label>
+                  <input
+                    type="radio"
+                    id="q1a2"
+                    name="q1"
+                    value="Čuva podatke u bazi"
+                  />
+                  Čuva podatke u bazi </label
+                ><br />
+                <label>
+                  <input
+                    type="radio"
+                    id="q1a3"
+                    name="q1"
+                    value="Kompajlira programski kod"
+                  />
+                  Kompajlira programski kod
+                </label>
+              </div>
+
+              <!-- Pitanje 2 -->
+              <div id="q2_block" class="quiz-question">
+                <h3>2. Koje od navedenih spadaju u frontend tehnologije?</h3>
+                <label>
+                  <input type="checkbox" id="q2a1" name="q2" value="HTML" />
+                  HTML </label
+                ><br />
+                <label>
+                  <input type="checkbox" id="q2a2" name="q2" value="CSS" />
+                  CSS </label
+                ><br />
+                <label>
+                  <input
+                    type="checkbox"
+                    id="q2a3"
+                    name="q2"
+                    value="JavaScript"
+                  />
+                  JavaScript </label
+                ><br />
+                <label>
+                  <input type="checkbox" id="q2a4" name="q2" value="PHP" />
+                  PHP
+                </label>
+              </div>
+
+              <!-- Pitanje 3 -->
+              <div id="q3_block" class="quiz-question">
+                <h3>
+                  3. Koji HTML tag koristimo za najvažniji naslov na stranici?
+                </h3>
+                <label>
+                  <input type="radio" id="q3a1" name="q3" value="<h1>" />
+                  &lt;h1&gt; </label
+                ><br />
+                <label>
+                  <input type="radio" id="q3a2" name="q3" value="<title>" />
+                  &lt;title&gt; </label
+                ><br />
+                <label>
+                  <input type="radio" id="q3a3" name="q3" value="<header>" />
+                  &lt;header&gt;
+                </label>
+              </div>
+
+              <!-- Pitanje 4 -->
+              <div id="q4_block" class="quiz-question">
+                <h3>
+                  4. Šta se smatra dobrom praksom pri radu na fakultetskom
+                  projektu?
+                </h3>
+                <label>
+                  <input
+                    type="checkbox"
+                    id="q4a1"
+                    name="q4"
+                    value="Redovan commit na GitHub"
+                  />
+                  Redovan commit na GitHub </label
+                ><br />
+                <label>
+                  <input
+                    type="checkbox"
+                    id="q4a2"
+                    name="q4"
+                    value="Raditi sve u jednom ZIP fajlu bez historije"
+                  />
+                  Raditi sve u jednom ZIP fajlu bez historije </label
+                ><br />
+                <label>
+                  <input
+                    type="checkbox"
+                    id="q4a3"
+                    name="q4"
+                    value="Pisati README dokumentaciju"
+                  />
+                  Pisati README dokumentaciju </label
+                ><br />
+                <label>
+                  <input
+                    type="checkbox"
+                    id="q4a4"
+                    name="q4"
+                    value="Ignorisati dizajn i strukturu"
+                  />
+                  Ignorisati dizajn i strukturu
+                </label>
+              </div>
+
+              <!-- Pitanje 5 -->
+              <div id="q5_block" class="quiz-question">
+                <h3>5. Koji opis najbolje objašnjava „responsive“ dizajn?</h3>
+                <label>
+                  <input
+                    type="radio"
+                    id="q5a1"
+                    name="q5"
+                    value="Sajt se prilagođava različitim veličinama ekrana"
+                  />
+                  Sajt se prilagođava različitim veličinama ekrana </label
+                ><br />
+                <label>
+                  <input
+                    type="radio"
+                    id="q5a2"
+                    name="q5"
+                    value="Sajt radi samo na desktop računarima"
+                  />
+                  Sajt radi samo na desktop računarima </label
+                ><br />
+                <label>
+                  <input
+                    type="radio"
+                    id="q5a3"
+                    name="q5"
+                    value="Sajt ima mnogo animacija i efekata"
+                  />
+                  Sajt ima mnogo animacija i efekata
+                </label>
+              </div>
+
+              <div class="quiz-actions">
+                <button id="checkAnswersBtn" class="primary-btn">
+                  Provjerite odgovore
+                </button>
+                <button
+                  id="restartQuizBtn"
+                  class="secondary-btn"
+                  style="display: none"
+                >
+                  Ponovo
+                </button>
+              </div>
+
+              <div id="quizResult" class="quiz-result"></div>
+            </form>
+
+            <p class="quiz-back-link">
+              <a href="studentfunzone.html">← Povratak na Student Fun Zone</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- OVERLAY -->
+        <div
+          id="quizPerfectOverlay"
+          class="modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="quizPerfectTitle"
+        >
+          <div class="modal-card">
+            <button
+              class="modal-close-btn"
+              type="button"
+              aria-label="Zatvori"
+              id="quizCloseBtn"
+            >
+              ×
+            </button>
+            <h2 id="quizPerfectTitle">Savršen rezultat!</h2>
+            <p id="quizPerfectMsg">
+              Odgovorili ste tačno na sva pitanja. Sjajan posao! Možete pokušati
+              ponovo ili se vratiti na druge aktivnosti.
+            </p>
+            <div class="modal-actions">
+              <button type="button" id="quizRestartBtn">Ponovo</button>
+              <a href="studentfunzone.html" class="secondary-btn"
+                >← Student Fun Zone</a
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; Internacionalna poslovno-informaciona akademija Tuzla</p>
+      </footer>
+    </div>
+
+    <script src="kviz.js"></script>
+  </body>
+</html>
