@@ -1,87 +1,118 @@
-IPI Akademija – Web Programiranje Projekat 1 (HTML, CSS, JavaScript)
+IPI Akademija – Web projekat (HTML, CSS, JavaScript)
 
-Projekt predstavlja proširenu i modernizovanu verziju osnovne “IPI Akademija” web stranice sa dodanim interaktivnim alatima u okviru Student Fun Zone sekcije.
+Ovaj projekat je urađen za predmet Web programiranje.
+Početna verzija stranice preuzeta je sa Moodle-a, a zatim sam je redizajnirao, proširio i dodao sve funkcionalnosti koje se traže u uputama.
 
-📌 Sadržaj projekta
+Cilj je bio da stranica izgleda modernije, da bude pregledna, te da sve nove stranice (Student Fun Zone alati) rade unutar jednog frameworka bez otvaranja novih tabova.
 
-Stranice uključuju:
+📌 Stranice u projektu
 
-Početna stranica (index.html)
+index.html – početna stranica
 
-Popis kurseva (popis.html)
+popis.html – popis kurseva
 
-Raspored kurseva (raspored.html)
+raspored.html – raspored kurseva
 
-Kontakt stranica (kontakt.html) – sa HTML validacijom i mailto logikom
+kontakt.html – kontakt forma sa validacijama + mailto
 
-Student Fun Zone (studentfunzone.html) – 5 integrisanih mini-aplikacija:
+studentfunzone.html – ulazna stranica za sve mini aplikacije
 
--Bingo igra (bingo.html)
+Student Fun Zone sadrži 5 funkcionalnih alata:
 
--Kviz (kviz.html)
+Bingo (bingo.html)
 
--Whiteboard – interaktivna ploča za crtanje (whiteboard.html)
+Kviz (kviz.html)
 
--Vision Board – kreiranje vizuelnih ciljeva (vision-board.html)
+Whiteboard (whiteboard.html)
 
--Kanban Board – mini upravljanje zadacima (kanban-board.html)
+Vision Board (vision-board.html)
 
-Sve aplikacije se otvaraju unutra frameworka putem <iframe> elementa, kako zadatak i traži.
+Kanban Board (kanban-board.html)
 
-**Tehnologije korištene u projektu**
+Sve stranice otvaraju se unutar glavnog layou­ta pomoću <iframe> elementa, kako je zadatak i tražio.
 
-HTML5
+🎨 Redizajn stranice
 
-CSS3 (custom redizajn postojećeg template-a)
+Originalna verzija stranice dosta je zastarjela, pa sam:
 
-JavaScript (ES6) – većina funkcionalnosti (Bingo, Kviz, Whiteboard, Vision Board, Kanban)
+promijenio kompletan layout,
 
-Git + GitHub za verzionisanje i finalnu predaju projekta
+dodao header u dva reda (logo + linkovi),
 
-🛠️ Funkcionalnosti po zahtjevu profesora
+uredio navigation bar i dropdown meni,
 
-✔️ 1. Dodatni “Snimi kao PDF” button
+prilagodio sve boje i fontove,
 
-Implementirano na:
+poboljšao raspored elemenata,
 
-Bingo – print samo bingo table
+dodao slike i vizuelne elemente u Student Fun Zone sekciji.
 
-Kanban – print cijele ploče
+CSS je prilagođen da izgleda modernije i da sve stranice budu ujednačene.
 
-Whiteboard – snimanje kao PNG
+🧩 Funkcionalnosti po zadatku
 
-Vision Board – snimanje stanja pomoću localStorage (snimanje modela, ne PDF)
+✔ “Snimi kao PDF”
 
-✔️ 2. “Pošalji mailom” button
+Dodano na:
 
-Pošto zadatak traži isključivo mailto način, kontakt forma:
+Bingo – printa samo Bingo tablu, a ne cijelu stranicu
 
-Validira inpute (email mora imati “@”, telefon mora biti broj)
+Kanban – snima prikaz ploče kao PNG
 
-Kreira mail kroz mailto: link
+Whiteboard – snimanje crteža kao PNG
 
-Ne koristi nikakve third-party servise
+Vision Board – snimanje i vraćanje elemenata preko localStorage
 
-Prikazuje poruku o uspješnoj pripremi maila
+Kviz – nema PDF, ali ima overlay za savršen rezultat
 
-✔️ 3. Student Fun Zone – submenu u navigaciji
+✔ “Pošalji mailom”
 
-Dropdown se prikazuje na hover
+Na kontakt stranici urađena je mailto funkcionalnost, uz validaciju:
 
-Nove stranice nisu odvojeni projekti već se učitavaju unutar glavnog frameworka
+email mora imati “@”
 
-Bento grid dizajn napravljen za pregled igara
+telefon mora biti broj
 
-✔️ 4. Redizajn cijele stranice
+polja ne mogu biti prazna
 
-Potpuno promijenjene boje
+Klik na “Pošalji” otvara mail klijent sa popunjenim podacima.
 
-Novi header u 2 reda
+✔ Student Fun Zone – dropdown meni
 
-Moderniji layout
+Dropdown se otvara na hover i pravilno se ponaša.
+Sve mini aplikacije otvaraju se unutar glavnog layouta.
 
-CSS optimiziran i prilagođen novom UI/UX izgledu
+✔ Manipulacija DOM-a i JavaScript funkcionalnosti
 
-Sve slike zamijenjene relevantnim i modernijim prikazima
+Bingo ćelije, provjera pobjede, modal…
 
-✔️ 5. GitHub verziono upravljanje
+Kviz sa automatskim bodovanjem
+
+Whiteboard sa canvas crtanjem
+
+Vision Board sa drag & drop funkcijama
+
+Kanban sa povlačenjem zadataka između kolona
+
+✔ LocalStorage
+
+Vision board i Kanban koriste localStorage za spremanje stanja.
+
+📁 Struktura projekta
+/css
+/js
+/slike
+index.html
+popis.html
+raspored.html
+kontakt.html
+studentfunzone.html
+bingo.html
+kviz.html
+whiteboard.html
+vision-board.html
+kanban-board.html
+README.md
+
+▶️ Kako pokrenuti projekat
+git clone https://github.com/eldardiz/projekat-1.git
