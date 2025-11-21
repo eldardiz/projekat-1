@@ -986,3 +986,200 @@ input[type="submit"]:hover {
     display: none !important;
   }
 }
+
+/* ===== VISUAL / VISION BOARD ===== */
+
+.vision-section {
+  margin-top: 24px;
+}
+
+.vision-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.17);
+  box-sizing: border-box;
+}
+
+.vision-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.vision-board {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* note */
+.note {
+  position: absolute;
+  width: 180px;
+  min-height: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  cursor: move;
+  font-size: 14px;
+  line-height: 1.4;
+  outline: none;
+}
+
+.color1 {
+  background: #fff7ed;
+}
+.color2 {
+  background: #ecfeff;
+}
+.color3 {
+  background: #f0fdf4;
+}
+.color4 {
+  background: #fef2f2;
+}
+.color5 {
+  background: #eef2ff;
+}
+.color6 {
+  background: #fdf4ff;
+}
+
+/* pinned image */
+.pinned-img {
+  position: absolute;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  cursor: move;
+}
+.pinned-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* quote */
+.quote {
+  position: absolute;
+  width: 220px;
+  padding: 10px 12px;
+  background: #ffffff;
+  border-left: 4px solid #1d4ed8;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  cursor: move;
+  font-size: 14px;
+  line-height: 1.4;
+  outline: none;
+}
+
+/* delete pin */
+.delete-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border: none;
+  background: #111827;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* recent tray */
+.recent-tray {
+  margin-top: 14px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.recent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.recent-items {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.recent-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+  border-radius: 10px;
+  width: 180px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.recent-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* restore btn */
+.restore-btn {
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* back link */
+.vision-back-link {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* PRINT – samo visual board card */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .vision-card,
+  .vision-card * {
+    visibility: visible !important;
+  }
+
+  .vision-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none !important;
+    background: #fff !important;
+    padding: 16px;
+  }
+
+  .top-header,
+  .nav-header,
+  .site-footer,
+  .vision-toolbar,
+  .vision-back-link,
+  .modal-overlay,
+  .recent-tray {
+    display: none !important;
+  }
+}
