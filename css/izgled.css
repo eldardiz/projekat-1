@@ -888,3 +888,101 @@ input[type="submit"]:hover {
   margin-top: 16px;
   text-align: center;
 }
+
+/* ===== WHITEBOARD – Student Fun Zone ===== */
+
+.whiteboard-section {
+  margin-top: 24px;
+}
+
+.whiteboard-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.17);
+  box-sizing: border-box;
+}
+
+.whiteboard-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.control-group label {
+  width: auto;
+  margin: 0;
+  font-weight: 500;
+}
+
+.toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.whiteboard-canvas-wrap {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#board {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #ffffff;
+  cursor: crosshair;
+}
+
+.whiteboard-back-link {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* PRINT – samo whiteboard card */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .whiteboard-card,
+  .whiteboard-card * {
+    visibility: visible !important;
+  }
+
+  .whiteboard-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    padding: 16px;
+  }
+
+  .top-header,
+  .nav-header,
+  .site-footer,
+  .whiteboard-toolbar,
+  .whiteboard-back-link,
+  .modal-overlay {
+    display: none !important;
+  }
+}

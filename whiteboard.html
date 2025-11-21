@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IPI Akademija – Whiteboard | Student Fun Zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/izgled.css" />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- GORNJI HEADER -->
+      <header class="top-header">
+        <a href="index.html" class="brand">
+          <img src="slike/logo-ipi.png" alt="IPI Akademija logo" />
+          <div class="brand-text">
+            <span class="brand-kicker">IPI AKADEMIJA</span>
+            <span class="brand-title">Program kurseva iz ICT oblasti</span>
+          </div>
+        </a>
+      </header>
+
+      <!-- DONJI HEADER -->
+      <header class="nav-header">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">O kursevima</a></li>
+            <li><a href="popis.html">Popis kurseva</a></li>
+            <li><a href="raspored.html">Raspored kurseva</a></li>
+
+            <li class="has-dropdown">
+              <a href="studentfunzone.html" class="sfz-link"
+                >Student Fun Zone</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="bingo.html">Bingo</a></li>
+                <li><a href="kviz.html">Kviz</a></li>
+                <li>
+                  <a href="whiteboard.html" class="is-active"
+                    >Interaktivni Whiteboard</a
+                  >
+                </li>
+                <li><a href="visual-board.html">Visual Board</a></li>
+                <li><a href="kanban-board.html">Kanban Board</a></li>
+              </ul>
+            </li>
+
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <article class="intro-article">
+          <div class="intro-text">
+            <h1>Student Fun Zone – Interaktivni Whiteboard</h1>
+            <p>
+              Ovo je digitalna ploča za skiciranje ideja, planova ili zadataka.
+              Možeš crtati mišem ili prstom, mijenjati boju i debljinu četke,
+              koristiti gumicu i sačuvati svoj crtež.
+            </p>
+            <p>
+              Whiteboard je idealan za brze brainstorm sesije ili objašnjavanje
+              koncepata tokom vježbi.
+            </p>
+          </div>
+          <div class="intro-media">
+            <img
+              src="slike/whiteboard.jpg"
+              alt="Digitalni whiteboard za studente"
+            />
+          </div>
+        </article>
+
+        <!-- WHITEBOARD -->
+        <section class="whiteboard-section">
+          <div class="whiteboard-card">
+            <div class="whiteboard-toolbar">
+              <div class="control-group">
+                <label for="colorPicker">Boja</label>
+                <input type="color" id="colorPicker" value="#1d4ed8" />
+              </div>
+
+              <div class="control-group">
+                <label for="brushSize">Četka</label>
+                <input type="range" id="brushSize" min="1" max="20" value="3" />
+              </div>
+
+              <div class="toolbar-actions">
+                <button id="eraserBtn" type="button">Briši</button>
+                <button id="clearBtn" type="button">Čista ploča</button>
+                <button id="saveBtn" type="button">Snimi sliku</button>
+
+                <!-- zahtjev zadatka -->
+                <button id="exportPdfBtn" type="button">Snimi kao PDF</button>
+                <button id="sendMailBtn" type="button">Pošalji mailom</button>
+              </div>
+            </div>
+
+            <div class="whiteboard-canvas-wrap" id="printArea">
+              <canvas id="board" width="1000" height="520"></canvas>
+            </div>
+
+            <p class="whiteboard-back-link">
+              <a href="studentfunzone.html">← Povratak na Student Fun Zone</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- POPUP ZA MAIL -->
+        <div
+          id="mailPopup"
+          class="modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mailPopupTitle"
+        >
+          <div class="modal-card">
+            <button
+              class="modal-close-btn"
+              type="button"
+              aria-label="Zatvori"
+              id="mailCloseBtn"
+            >
+              ×
+            </button>
+            <h2 id="mailPopupTitle">Pošalji whiteboard mailom</h2>
+            <p>Unesi email na koji želiš poslati sadržaj.</p>
+
+            <div class="form-group">
+              <label for="recipientEmail">Email</label>
+              <input
+                type="email"
+                id="recipientEmail"
+                placeholder="primjer@email.com"
+                required
+              />
+              <p
+                id="recipientError"
+                class="error-message"
+                style="display: none"
+              >
+                Unesi ispravan email.
+              </p>
+            </div>
+
+            <div class="modal-actions">
+              <button type="button" id="mailSendBtn">Pošalji</button>
+              <button type="button" id="mailCancelBtn">Poništi</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; Internacionalna poslovno-informaciona akademija Tuzla</p>
+      </footer>
+    </div>
+
+    <script src="whiteboard.js"></script>
+  </body>
+</html>
