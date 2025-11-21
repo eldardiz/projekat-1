@@ -127,8 +127,7 @@ mailSendBtn.addEventListener("click", () => {
 
   const bodyText =
     "Pozdrav,\n\n" +
-    "U prilogu/uz ovu poruku šaljem sadržaj Whiteboard aktivnosti sa IPI Student Fun Zone.\n" +
-    "Ako želiš uključiti crtež, prvo klikni 'Snimi sliku' pa je dodaj kao prilog u email klijentu.\n\n" +
+    "U prilogu uz ovu poruku šaljem sadržaj Whiteboarda.\n" +
     "Lijep pozdrav!";
 
   const mailtoLink =

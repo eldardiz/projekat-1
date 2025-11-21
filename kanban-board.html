@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IPI Akademija – Kanban Board | Student Fun Zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/izgled.css" />
+
+    <!-- html2canvas za snimanje PNG (čisti JS lib, bez backend-a) -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- GORNJI HEADER -->
+      <header class="top-header">
+        <a href="index.html" class="brand">
+          <img src="slike/logo-ipi.png" alt="IPI Akademija logo" />
+          <div class="brand-text">
+            <span class="brand-kicker">IPI AKADEMIJA</span>
+            <span class="brand-title">Program kurseva iz ICT oblasti</span>
+          </div>
+        </a>
+      </header>
+
+      <!-- DONJI HEADER SA DROPDOWNOM -->
+      <header class="nav-header">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">O kursevima</a></li>
+            <li><a href="popis.html">Popis kurseva</a></li>
+            <li><a href="raspored.html">Raspored kurseva</a></li>
+
+            <li class="has-dropdown">
+              <a href="studentfunzone.html" class="sfz-link"
+                >Student Fun Zone</a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="bingo.html">Bingo</a></li>
+                <li><a href="kviz.html">Kviz</a></li>
+                <li><a href="whiteboard.html">Interaktivni Whiteboard</a></li>
+                <li><a href="visual-board.html">Visual Board</a></li>
+                <li>
+                  <a href="kanban-board.html" class="is-active">Kanban Board</a>
+                </li>
+              </ul>
+            </li>
+
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- HERO -->
+        <article class="intro-article">
+          <div class="intro-text">
+            <h1>Student Fun Zone – Kanban Board</h1>
+            <p>
+              Kanban ploča se koristi za organizaciju zadataka kroz faze rada.
+              Imaš tri kolone: To Do (planirano), In Progress (u toku) i Done
+              (završeno).
+            </p>
+            <p>
+              Zadaci se dodaju kroz dugme “Dodaj zadatak”, a zatim se drag &
+              drop-om prebacuju između kolona.
+            </p>
+          </div>
+          <div class="intro-media">
+            <img src="slike/kanban-hero.jpg" alt="Kanban board za studente" />
+          </div>
+        </article>
+
+        <!-- KANBAN -->
+        <section class="kanban-section">
+          <div class="kanban-card" id="kanbanPrintArea">
+            <div class="kanban-toolbar">
+              <button id="addTaskBtn" type="button">Dodaj zadatak</button>
+              <button id="savePngBtn" type="button">Snimi kao PNG</button>
+              <button id="clearBoardBtn" type="button">Očisti ploču</button>
+
+              <!-- zahtjev zadatka -->
+              <button id="exportPdfBtn" type="button">Snimi kao PDF</button>
+            </div>
+
+            <div class="board">
+              <div class="column" data-status="todo">
+                <h2>To Do</h2>
+                <div class="taskList" id="todoList"></div>
+              </div>
+
+              <div class="column" data-status="inprogress">
+                <h2>In Progress</h2>
+                <div class="taskList" id="inprogressList"></div>
+              </div>
+
+              <div class="column" data-status="done">
+                <h2>Done</h2>
+                <div class="taskList" id="doneList"></div>
+              </div>
+            </div>
+          </div>
+
+          <p class="kanban-back-link">
+            <a href="studentfunzone.html">← Povratak na Student Fun Zone</a>
+          </p>
+        </section>
+
+        <!-- MODAL: ADD TASK -->
+        <div
+          id="taskModal"
+          class="modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="taskModalTitle"
+        >
+          <div class="modal-card">
+            <button
+              class="modal-close-btn"
+              type="button"
+              aria-label="Zatvori"
+              id="taskModalClose"
+            >
+              ×
+            </button>
+            <h2 id="taskModalTitle">Dodaj novi zadatak</h2>
+
+            <div class="form-group">
+              <label for="taskText">Naziv zadatka</label>
+              <input
+                type="text"
+                id="taskText"
+                placeholder="npr. Napraviti layout za homepage"
+              />
+              <p id="taskError" class="error-message" style="display: none">
+                Unesi naziv zadatka.
+              </p>
+            </div>
+
+            <div class="form-group">
+              <label for="taskStatus">Kolona</label>
+              <select id="taskStatus">
+                <option value="todo">To Do</option>
+                <option value="inprogress">In Progress</option>
+                <option value="done">Done</option>
+              </select>
+            </div>
+
+            <div class="modal-actions">
+              <button id="taskCreateBtn" type="button">Dodaj</button>
+              <button id="taskCancelBtn" type="button">Poništi</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL: CLEAR CONFIRM -->
+        <div
+          id="clearModal"
+          class="modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="clearModalTitle"
+        >
+          <div class="modal-card">
+            <h2 id="clearModalTitle">Očisti cijelu ploču?</h2>
+            <p>Ovo briše sve zadatke.</p>
+            <div class="modal-actions">
+              <button id="clearYesBtn" type="button">Da, obriši</button>
+              <button id="clearNoBtn" type="button">Ne</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <p>&copy; Internacionalna poslovno-informaciona akademija Tuzla</p>
+      </footer>
+    </div>
+
+    <script src="kanban-board.js"></script>
+  </body>
+</html>

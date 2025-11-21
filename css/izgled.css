@@ -1183,3 +1183,114 @@ input[type="submit"]:hover {
     display: none !important;
   }
 }
+
+/* ===== KANBAN BOARD ===== */
+
+.kanban-section {
+  margin-top: 24px;
+}
+
+.kanban-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.17);
+  box-sizing: border-box;
+}
+
+.kanban-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.board {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.column {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  width: 33.33%;
+  padding: 10px;
+  border-radius: 12px;
+  min-height: 300px;
+}
+
+.column h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.taskList {
+  min-height: 220px;
+}
+
+.task {
+  background: #fff7a8;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: grab;
+  user-select: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.task.dragging {
+  opacity: 0.6;
+  transform: scale(1.03);
+}
+
+.kanban-back-link {
+  margin-top: 14px;
+  text-align: center;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .board {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+  }
+}
+
+/* PRINT – samo kanban card */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .kanban-card,
+  .kanban-card * {
+    visibility: visible !important;
+  }
+
+  .kanban-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none !important;
+    background: #fff !important;
+    padding: 16px;
+  }
+
+  .top-header,
+  .nav-header,
+  .site-footer,
+  .kanban-toolbar,
+  .kanban-back-link,
+  .modal-overlay {
+    display: none !important;
+  }
+}
